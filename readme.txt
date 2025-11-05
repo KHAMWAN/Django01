@@ -3,4 +3,3 @@ vscode package
 - Path Intellisense | Christian Kohler | ช่วยในการค้นหา Path ที่เราต้องการ
 - EditorConfig for VS Code | EditorConfig | ช่วยจัดรูปแบบของโค้ด ตามที่เรากำหนด
 
-continus
