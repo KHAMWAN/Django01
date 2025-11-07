@@ -16,5 +16,24 @@ def index(request):  # ส่งโดยใช้ dictionary
     })
 
 
+def home(request):  # ส่งโดยใช้ dictionary
+
+    activities = [
+        'Football',
+        'Running',
+        'Badminton',
+    ]
+
+    return render(request, 'home.html', {
+        'activities': activities,
+    })
+
+
 def article(request, year, slug):
-    return HttpResponse(f"Article Year: {year}, Slug: {slug}")
+    if year and slug:  # กรณีมีการส่งค่ามา
+        return render(request, 'article.html', {
+            'year': year,
+            'slug': slug,
+        })
+    else:  # กรณีไม่มีการส่งค่ามา
+        return render(request, 'index.html')

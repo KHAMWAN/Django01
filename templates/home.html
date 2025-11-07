@@ -11,15 +11,13 @@
     <link rel="stylesheet" href="" />
   </head>
   <body>
-    {% if id == '001' and name == 'John Doe' %}
-    <h1>Welcome, Admin {{ name }}</h1>
+    <h1>For endfor Page</h1>
+    <!-- {% for ตัวแปร in Arrey %}...{% endfor %} -->
     <hr />
-    <h2>ID: {{id}}</h2>
-    <h2>Name: {{name}}</h2>
-    <h2>Email: {{email}}</h2>
-    {% else %}
-    <h1>Welcome, Guest</h1>
-    <hr />
-    {% endif %}
+    <ul>
+      {% for x in activities %}
+      <li><h3>Activity {{ forloop.counter }}: {{ x }}</h3></li>
+      {% endfor %}
+    </ul>
   </body>
 </html>

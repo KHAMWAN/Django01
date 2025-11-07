@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),  # name ใช้ตั้งชื่อในการอ้างอิง URL
+    path('home/', views.home, name='home'),
     re_path(
         r'article/(?P<year>[0-9]{4})/(?P<slug>[\w-]+)/$', views.article, name='article'),
 ]
