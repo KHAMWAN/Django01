@@ -1,25 +1,10 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
-    <link rel="stylesheet" href="" />
-  </head>
+{% extends "layouts/base.html" %}
+{% block title %} Article Page {% endblock %}
   <body>
-    {% if id == '001' and name == 'John Doe' %}
-    <h1>Welcome, Admin {{ name }}</h1>
-    <hr />
-    <h2>ID: {{id}}</h2>
-    <h2>Name: {{name}}</h2>
-    <h2>Email: {{email}}</h2>
-    {% else %}
-    <h1>Welcome, Guest</h1>
-    <hr />
-    {% endif %}
+
+    {% block content %}    
+     <h2>Article Year: {{ year }} Slug: {{ slug }}</h2>
+    {% endblock %} <!-- End Content -->
+  
   </body>
 </html>

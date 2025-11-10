@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+    <title>{% block title %} Test Project {% endblock %}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h1>Header</h1>
+    <hr />
+    {% block content %}{% endblock %}
+    <hr />
+    <h1>Footer</h1>
+    <br />
+    <a href="{% url 'myapp:index' %}">Go Back To index.html</a><br>
+    <a href="{% url 'myapp:home' %}">Go Back To home.html</button></a><br>
+    <a href="{% url 'myapp:article' year=2025 slug='081-9864092' %}">Go Back To article.html</a>
+  </body>
+</html>

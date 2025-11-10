@@ -1,23 +1,15 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
-    <link rel="stylesheet" href="" />
-  </head>
+{% extends "layouts/base.html" %}
+{% block title %} Home Page {% endblock %}
   <body>
-    <h1>For endfor Page</h1>
+    {% block content %}
+    <h3>Loop Data with ( For Loop ) </h3>
     <!-- {% for ตัวแปร in Arrey %}...{% endfor %} -->
-    <hr />
+    <br />
     <ul>
       {% for x in activities %}
       <li><h3>Activity {{ forloop.counter }}: {{ x }}</h3></li>
       {% endfor %}
     </ul>
+    {% endblock %} <!-- End Content -->
   </body>
 </html>

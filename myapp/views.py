@@ -4,34 +4,34 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def index(request):  # ส่งโดยใช้ dictionary
-    id = '001'
+def index(request):
+    id = '001'  # กำหนดข้อมูลใส่ตัวแปร
     name = 'John Doe'
     email = 'john@gmail.com'
 
-    return render(request, 'index.html', {
+    return render(request, 'index.html', {  # ส่งเป็น dictionary
         'id': id,
         'name': name,
         'email': email,
     })
 
 
-def home(request):  # ส่งโดยใช้ dictionary
+def home(request):
 
-    activities = [
+    activities = [  # ใส่ Array
         'Football',
         'Running',
         'Badminton',
     ]
 
-    return render(request, 'home.html', {
+    return render(request, 'home.html', {  # ส่งเป็น dictionary
         'activities': activities,
     })
 
 
 def article(request, year, slug):
-    if year and slug:  # กรณีมีการส่งค่ามา
-        return render(request, 'article.html', {
+    if year and slug:
+        return render(request, 'article.html', {  # ส่งเป็น dictionary
             'year': year,
             'slug': slug,
         })
